@@ -23,6 +23,12 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# BLKI
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+BLACKIRON_BUILDTYPE := OFFICIAL
+BLACKIRON_MAINTAINER := Ralf979
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
