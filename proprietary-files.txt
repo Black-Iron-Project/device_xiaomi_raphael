@@ -32,12 +32,18 @@ vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
+vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
 vendor/lib/rfsa/adsp/libproxy_skel.so
+vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
+vendor/lib/rfsa/adsp/libworker_pool.so
 vendor/lib/rfsa/adsp/misound_res.bin
 
 # HotwordEnrollment - from raphael-user-11-RKQ1.200826.002-V12.5.2.0.RFKMIXM-release-keys
@@ -392,6 +398,7 @@ vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so;DISABLE_CHECKELF
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libHalSuperSensorServer.so
+vendor/lib64/libI420colorconvert.so
 vendor/lib64/libSuperSensor.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libVDClearShot.so
@@ -432,6 +439,9 @@ vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libdoc_photo.so;DISABLE_DEPS
+vendor/lib64/libdoc_photo_c++_shared.so;DISABLE_CHECKELF
+vendor/lib64/libfastrpc_utf_stub.so
 vendor/lib64/libft2vendor.so
 vendor/lib64/libgui_vendor.so;DISABLE_CHECKELF
 vendor/lib64/libmialgo_fs.so
@@ -440,8 +450,15 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_855.so
+vendor/lib64/libmibokeh_gallery.so
+vendor/lib64/libmisr.so;DISABLE_DEPS
+vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmotion_photo.so;DISABLE_DEPS
+vendor/lib64/libmotion_photo_c++_shared.so;DISABLE_CHECKELF
+vendor/lib64/libmotion_photo_mace.so;DISABLE_CHECKELF
 vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
+vendor/lib64/libqvrcamera_client.qti.so;DISABLE_CHECKELF
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libSNPE.so
@@ -473,18 +490,18 @@ vendor/lib64/libmivendor_module_motor.so
 vendor/lib64/mi.motor.daemon.so
 
 # Camera (Popup sounds)
-media/audio/ui/popup_cangmen_down.ogg
-media/audio/ui/popup_cangmen_up.ogg
-media/audio/ui/popup_chilun_down.ogg
-media/audio/ui/popup_chilun_up.ogg
-media/audio/ui/popup_jijia_down.ogg
-media/audio/ui/popup_jijia_up.ogg
-media/audio/ui/popup_mofa_down.ogg
-media/audio/ui/popup_mofa_up.ogg
-media/audio/ui/popup_muqin_down.ogg
-media/audio/ui/popup_muqin_up.ogg
-media/audio/ui/popup_yingyan_down.ogg
-media/audio/ui/popup_yingyan_up.ogg
+system/media/audio/ui/popup_cangmen_down.ogg
+system/media/audio/ui/popup_cangmen_up.ogg
+system/media/audio/ui/popup_chilun_down.ogg
+system/media/audio/ui/popup_chilun_up.ogg
+system/media/audio/ui/popup_jijia_down.ogg
+system/media/audio/ui/popup_jijia_up.ogg
+system/media/audio/ui/popup_mofa_down.ogg
+system/media/audio/ui/popup_mofa_up.ogg
+system/media/audio/ui/popup_muqin_down.ogg
+system/media/audio/ui/popup_muqin_up.ogg
+system/media/audio/ui/popup_yingyan_down.ogg
+system/media/audio/ui/popup_yingyan_up.ogg
 
 # Charger (Battery Cryptographic)
 vendor/bin/batterysecret
@@ -634,7 +651,7 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # DPM
-framework/tcmclient.jar
+system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
@@ -970,8 +987,8 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
 # Permissions
-etc/permissions/privapp-permissions-qti.xml
-etc/sysconfig/qti_whitelist.xml
+system/etc/permissions/privapp-permissions-qti.xml
+system/etc/sysconfig/qti_whitelist.xml
 
 # PowerOffAlarm - From Vayu V14.0.3.0.TJUIDXM
 product/app/PowerOffAlarm/PowerOffAlarm.apk|8d5f01ef9cc8c67ccb68b6c620d3019f26cf70f7
@@ -994,7 +1011,7 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 vendor/lib64/libqdma_file_agent.so
 
 # Power-off charging daemon
-bin/charger:bin/chargeonlymode
+system/bin/chargeonlymode
 
 # QMI
 system_ext/etc/permissions/qti_libpermissions.xml
